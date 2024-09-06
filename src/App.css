@@ -1,38 +1,75 @@
 .App {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+h1 {
+  color: #2a9d8f;
+  font-size: 2.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th,
+td {
+  padding: 15px;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+th {
+  background-color: #264653;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+td {
+  background-color: #e9f5f8;
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tr:nth-child(even) td {
+  background-color: #ccecf1;
+}
+
+input {
+  margin-right: 10px;
+  padding: 10px;
+  border: 2px solid #2a9d8f;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #e76f51;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+input+input {
+  margin-left: 5px;
+}
+
+tbody tr:hover {
+  background-color: #f4a261;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
